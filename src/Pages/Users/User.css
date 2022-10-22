@@ -1,0 +1,46 @@
+.section-user{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #242424a4, rgba(34, 34, 34, 0.593)), url(../../assets/capture9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.user-info-wrapper{
+    width: 80%;
+    gap: 1rem;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* display: grid; */
+    /* grid-template-columns: repeat(5, 1fr); */
+}
+.user-info{
+    border: 1px solid azure;
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.user-image, img{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    /* transform: scale(0.5); */
+    height: auto;
+    margin: 0 auto;
+}
+.text{
+    text-align: left;
+    font-size: 1.4rem;
+    color: azure;
+}

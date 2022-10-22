@@ -1,0 +1,28 @@
+.error-page-wrap{
+    min-height: 100vh;
+    background: linear-gradient(to right, #242424a4, rgba(34, 34, 34, 0.593)), url(../../assets/capture9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.error-page{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error-msg{
+    font-family: secondaryFont;
+    font-size: 3rem;
+}
+.heading-main.err{
+    line-height: 1.5;
+}
