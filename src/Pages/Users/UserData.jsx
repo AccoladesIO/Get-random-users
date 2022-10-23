@@ -1,5 +1,5 @@
 import React from 'react'
-import UserProfile from './userProfile'
+
 
 const UserData = ({ data }) => {
   return (
@@ -16,7 +16,7 @@ const UserData = ({ data }) => {
               <h3 className='heading-alt'> User {i + 1}</h3>
               <h3 className='text'>Name: {users.name.first} {users.name.last} </h3>
               <h3 className='text'>Gender: {users.gender} </h3>
-              <h3 className='text'>Email: {users.email}</h3>
+              <h3 className='text'>Cell: {users.cell}</h3>
             </div>
 
           )
