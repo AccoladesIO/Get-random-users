@@ -16,7 +16,7 @@ const Home = () => {
       <h3 className='heading-alt'>Created with 💖 by Ononobi 'AccoladesIO' Praise</h3>
       <div className='button-wrapper'>
       <button type='button' onClick={handleClick}>Get Started</button>
-      <button type='button'>ReadMe</button>
+      <button type='button'><a href='https://github.com/AccoladesIO/Get-random-users/blob/main/README.md' target='blank'>ReadMe</a></button>
       </div> 
     </article>
    </section>
