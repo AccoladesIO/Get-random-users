@@ -1,7 +1,7 @@
 .section-home{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to right, #242424a4, rgba(34, 34, 34, 0.593)), url(../../assets/Capture9.jpg);
+    background: linear-gradient(to right, #242424a4, rgba(34, 34, 34, 0.979));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
