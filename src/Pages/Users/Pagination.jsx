@@ -10,7 +10,7 @@ const Pagination = ({totalPost, postPerPage, setCurrentPage, currentPage}) => {
     }
   return (
     <div className='btn-wrapper'>
-        <button onClick={() => setCurrentPage(currentPage - 1)}> prev</button>    
+       {currentPage !== 1 &&  <button onClick={() => setCurrentPage(currentPage - 1)}> prev</button>}    
         {pages.map((page, index) => {
 
             const switchPage = () => {
@@ -23,7 +23,7 @@ const Pagination = ({totalPost, postPerPage, setCurrentPage, currentPage}) => {
                 </>
             )
         })}
-        <button onClick={() => setCurrentPage(currentPage + 1)}> next</button>    
+        {currentPage !== 10 && <button onClick={() => setCurrentPage(currentPage + 1)}> next</button>}    
     </div>
   )
 }
