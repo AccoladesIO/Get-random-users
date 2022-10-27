@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import './User.css'
 import UserData from './UserData'
 import Loading from '../../Loading'
-import Pagination from './Pagination'
+
 
 const User = () => {
   const [loading, setLoading] = useState(true)
@@ -12,7 +12,7 @@ const User = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [postPerPage, setPostPerPage] = useState(8)
 
-  const url = 'https://randomuser.me/api/?results=80';
+  const url = 'https://randomuser.me/api/?results=80&nat=us';
 
   const fetchData = async () => {
     // enable loading state while fetching data
@@ -40,8 +40,9 @@ const User = () => {
   // well explanatory enough?
   const firstPostIndex = lastPostIndex - postPerPage;
 
-  // just give me data in 8 sets abeg
-  const currentPost = data.slice(firstPostIndex - lastPostIndex)
+  // 
+  const currentPost = data.slice(firstPostIndex, lastPostIndex)
+  console.log(currentPost)
 
   // display loading component when data is been fetched
   if (loading) {
@@ -55,15 +56,14 @@ const User = () => {
   // 
   return (
     <>
-      <UserData 
-      data={currentPost}
-      />
-      <Pagination
+      <UserData
+        data={currentPost}
         totalPost={data.length}
         postPerPage={postPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
+      
     </>
   )
 }
