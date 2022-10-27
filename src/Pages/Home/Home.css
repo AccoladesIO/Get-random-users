@@ -1,7 +1,7 @@
 .section-home{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to right, #242424a4, rgba(34, 34, 34, 0.979));
+    background: linear-gradient(to right, #242424a4, rgba(34, 34, 34, 0.593)), url(../../assets/Capture9.PNG);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -24,12 +24,41 @@
     line-height: 1.7;
     text-align: center;
     font-family: primaryFont;
+    animation: textAnimate 1.5s ease-in-out;
 }
 .heading-alt{
     font-size: 2rem;
     text-align: center;
     font-family: secondaryFont;
+    animation: text_Animate 1.5s ease-in-out;
 }
+@keyframes textAnimate {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+        scale: 0.7;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        scale: 1;
+    }
+}
+
+@keyframes text_Animate {
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+        scale: 0.7;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        scale: 1;
+    }
+}
+
+
 a{
     color: #fff;
     text-decoration: none;
@@ -77,4 +106,19 @@ button:hover::before{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    animation: btnAnimate 1.5s ease-in-out;
+}
+
+
+@keyframes btnAnimate {
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+        scale: 0.7;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        scale: 1;
+    }
 }
