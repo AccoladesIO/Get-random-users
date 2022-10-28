@@ -11,30 +11,31 @@ function App() {
 
 
   return (
-    
-    <Router>
-      <ErrorBoundary>
-      <Routes>
-        <Route path='/' exact
-          element={
-            <>
-              <Navbar />
-              <Home />
-            </>
+
+    <ErrorBoundary>
+
+      <Router>
+        <Routes>
+          <Route path='/' exact
+            element={
+              <>
+                <Navbar />
+                <Home />
+              </>
+            } />
+          <Route path='/user'
+            element={
+              <>
+                <Navbar />
+                <User />
+              </>
+            } />
+          <Route path='*' element={
+            <Error />
           } />
-        <Route path='/user'
-          element={
-            <>
-              <Navbar />
-              <User />
-            </>
-          } />
-        <Route path='*' element={
-          <Error />
-        } />
-      </Routes>
-        </ErrorBoundary>
-    </Router>
+        </Routes>
+      </Router>
+    </ErrorBoundary>
   )
 }
 
