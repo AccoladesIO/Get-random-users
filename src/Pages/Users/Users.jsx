@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import './User.css'
 import UserData from './UserData'
 import Loading from '../../Loading'
+import Pagination from './Pagination'
 
 
 const User = () => {
@@ -55,16 +56,17 @@ const User = () => {
 
   // 
   return (
-    <>
+    <section className="section-user">
       <UserData
         data={currentPost}
-        totalPost={data.length}
-        postPerPage={postPerPage}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
       />
-      
-    </>
+      <Pagination 
+       totalPost={data.length}
+       postPerPage={postPerPage}
+       setCurrentPage={setCurrentPage}
+       currentPage={currentPage}
+      />
+    </section>
   )
 }
 
