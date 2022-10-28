@@ -61,6 +61,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 .pagination-btn{
     width: 10px;
