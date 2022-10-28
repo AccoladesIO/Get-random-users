@@ -3,13 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Error from "./Pages/Error/Error";
+import ErrorBoundary from "./Pages/Error/ErrorBoundary";
 import Home from "./Pages/Home/Home";
 import User from "./Pages/Users/Users";
 
 function App() {
 
+
   return (
+    
     <Router>
+      <ErrorBoundary>
       <Routes>
         <Route path='/' exact
           element={
@@ -29,6 +33,7 @@ function App() {
           <Error />
         } />
       </Routes>
+        </ErrorBoundary>
     </Router>
   )
 }
