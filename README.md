@@ -13,3 +13,5 @@
  
  ## Cloning?
  You can also clone this project using after forking into your repository using git clone in your machine terminal
+ 
+ and proceed development using npm run dev.
